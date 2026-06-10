@@ -1,0 +1,37 @@
+//Write a program to Check strong number.
+
+#include <stdio.h>
+int main()
+{
+int num, temp, digit, i, fact, sum = 0;
+printf("Enter a number: ");
+scanf("%d", &num);
+
+temp = num;
+
+while (temp > 0) 
+{
+   digit = temp % 10;
+   fact = 1;
+
+   for (i = 1; i <= digit; i++) 
+        {
+            fact *= i;
+        }
+
+   sum += fact;
+   temp = temp / 10;
+}
+
+if (sum == num) 
+     {
+        printf("Strong Number\n");
+     } 
+else
+     {
+        printf("Not a Strong Number\n");
+     }
+
+return 0;
+
+}

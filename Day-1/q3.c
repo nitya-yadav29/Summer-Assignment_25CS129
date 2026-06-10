@@ -17,11 +17,3 @@ printf("Factorial:%d",fact);
 return 0;
 
 }
-
-
-
-
-
-
-
-}

@@ -18,6 +18,6 @@ while (1)
     lcm++;
   }
 
- return 0;
+return 0;
 
 }

@@ -1,0 +1,25 @@
+/*Write a program to Print character triangle.
+A
+AB
+ABC
+ABCD
+ABCDE*/
+
+#include <stdio.h>
+int main() 
+{
+int i, j, r;
+printf("Enter number of rows: ");
+scanf("%d", &r);
+
+for(i = 1; i <= r; i++)
+  {
+    for(j = 0; j < i; j++) 
+       {
+        printf("%c", 'A' + j);
+       }
+     printf("\n");
+   }
+return 0;
+  
+}

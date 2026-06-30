@@ -46,4 +46,35 @@ int main()
         {
             found = 0;
 
-            printf("Enter Book Name to Search:
+            printf("Enter Book Name to Search: ");
+            scanf(" %[^\n]", search);
+
+            for(i = 0; i < n; i++)
+            {
+                if(strcmp(book[i], search) == 0)
+                {
+                    printf("Book Found!\n");
+                    printf("Book Name: %s\n", book[i]);
+                    printf("Author: %s\n", author[i]);
+                    found = 1;
+                }
+            }
+
+            if(found == 0)
+            {
+                printf("Book Not Found.\n");
+            }
+        }
+        else if(choice == 4)
+        {
+            printf("Thank You!\n");
+            break;
+        }
+        else
+        {
+            printf("Invalid Choice!\n");
+        }
+    }
+
+    return 0;
+}

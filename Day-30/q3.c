@@ -39,4 +39,51 @@ int main()
             }
             else
             {
-                printf("\nEmployee Details
+                printf("\nEmployee Details:\n");
+
+                for(i = 0; i < n; i++)
+                {
+                    printf("\nEmployee %d\n", i + 1);
+                    printf("ID: %d\n", id[i]);
+                    printf("Name: %s\n", name[i]);
+                    printf("Salary: %d\n", salary[i]);
+                }
+            }
+        }
+        else if(choice == 3)
+        {
+            found = 0;
+
+            printf("Enter Employee Name to Search: ");
+            scanf(" %[^\n]", search);
+
+            for(i = 0; i < n; i++)
+            {
+                if(strcmp(name[i], search) == 0)
+                {
+                    printf("\nEmployee Found!\n");
+                    printf("ID: %d\n", id[i]);
+                    printf("Name: %s\n", name[i]);
+                    printf("Salary: %d\n", salary[i]);
+                    found = 1;
+                }
+            }
+
+            if(found == 0)
+            {
+                printf("Employee Not Found.\n");
+            }
+        }
+        else if(choice == 4)
+        {
+            printf("Thank You!\n");
+            break;
+        }
+        else
+        {
+            printf("Invalid Choice!\n");
+        }
+    }
+
+    return 0;
+}
